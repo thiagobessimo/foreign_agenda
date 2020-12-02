@@ -1,0 +1,37 @@
+Transparent
+#00000000
+
+Whites
+#fdfdfd - white 1
+#c1c1c1 - grey 1
+#878787 - grey 2
+#535353 - grey 3
+
+Blacks
+#000000 - black 1
+#000510 - black 2
+#001020 - black 3
+#002040 - black 4
+#004080 - black 5
+
+Blues
+#2000ff - blue 1
+#2020ff - blue 2
+#2040ff - blue 3
+#2060ff - blue 4
+#2080ff - blue 5
+
+Others
+#ff4040 - red
+#ff8040 - orange
+#ffc500 - yellow
+#08ddaa - green
+#2080ff - blue 5
+#642fff - purple
+#ff60dd - pink
+
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+
+  &:hover {
+    opacity: 0.6;
+  }

@@ -1,0 +1,24 @@
+- name: Breve
+  bio: |
+    Breve is a platform for small briefings on topics related to politics, international relations and data
+  featured: false
+
+- name: Foreign Policy
+  bio: |
+    Breve is a platform for small briefings on topics related to politics, international relations and data
+  featured: false
+
+- name: International Security
+  bio: |
+    Breve is a platform for small briefings on topics related to politics, international relations and data
+  featured: false
+
+- name: Data Visualisation
+  bio: |
+    Breve is a platform for small briefings on topics related to politics, international relations and data
+  featured: false
+
+- name: China
+  bio: |
+    Breve is a platform for small briefings on topics related to politics, international relations and data
+  featured: false
