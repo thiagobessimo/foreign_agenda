@@ -11,7 +11,10 @@ import mediaqueries from "@styles/media";
 const commonStyles = p => css`
   font-weight: bold;
   color: ${p.theme.colors.primary};
-  font-family: ${p.theme.fonts.sansSerif};
+  font-family: ${p => p.theme.fonts.sansSerif};
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.618;
 `;
 
 const h1 = styled.h1`

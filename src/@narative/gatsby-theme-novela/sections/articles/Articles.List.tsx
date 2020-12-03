@@ -322,11 +322,11 @@ const ImageContainer = styled.div<{ narrow: boolean; gridLayout: string }>`
 `;
 
 const Title = styled(Headings.h2)`
+  font-family: ${p => p.theme.fonts.sansSerif};
   font-size: 24px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.618;
   color: ${p => p.theme.colors.primary};
-  font-family: ${p => p.theme.fonts.sansSerif};
   padding: ${p =>
     p.hasOverflow && p.gridLayout === 'tiles' ? '5px' : '5px'} 0px;
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);

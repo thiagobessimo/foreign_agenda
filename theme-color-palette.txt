@@ -35,3 +35,8 @@ Others
   &:hover {
     opacity: 0.6;
   }
+
+  font-family: ${p => p.theme.fonts.sansSerif};
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.618;

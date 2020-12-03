@@ -49,7 +49,7 @@ const Trackline = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: calc(88vh - 40px);
+  height: calc(100vh - 50px);
   max-height: 500px;
   width: 1px;
   background-color: ${p => p.theme.colors.track};

@@ -164,13 +164,15 @@ const CopyButton = styled.button`
 const Container = styled.div`
   overflow: scroll;
   width: 100%;
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 auto;
-  font-size: 14px;
   margin: 15px auto 50px;
   border-radius: 0px;
   border: 1px solid ${p => p.theme.colors.primary};
   font-family: ${p => p.theme.fonts.monospace} !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.618;
 
   textarea,
   pre {

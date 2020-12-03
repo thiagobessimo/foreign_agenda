@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
+import ThemeButton from "@components/ThemeButton";
+import GridButtons from "@components/GridButtons";
 import Section from '@components/Section';
 import Bio from "@components/Bio";
-import Icons from '@icons';
+
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
-
-import { GridLayoutContext } from './Articles.List.Context';
 
 const authorQuery = graphql`
   {
@@ -28,13 +28,9 @@ const authorQuery = graphql`
 `;
 
 const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
-  const { gridLayout = 'tiles', hasSetGridLayout, setGridLayout } = useContext(
-    GridLayoutContext,
-  );
 
   const results = useStaticQuery(authorQuery);
   const hero = results.site.edges[0].node.siteMetadata.hero;
-  const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
   const featuredAuthor = authors.find(author => author.featured);
 
   if (!featuredAuthor) {
@@ -51,26 +47,10 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
       </HeadingContainer> */}
       <SubheadingContainer>
         <Bio author={featuredAuthor} />
-        <GridControlsContainer>
-          <GridButton
-            onClick={() => setGridLayout('tiles')}
-            active={tilesIsActive}
-            data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
-          >
-            <Icons.Tiles />
-          </GridButton>
-          <GridButton
-            onClick={() => setGridLayout('rows')}
-            active={!tilesIsActive}
-            data-a11y="false"
-            title="Show articles in Row grid"
-            aria-label="Show articles in Row grid"
-          >
-            <Icons.Rows />
-          </GridButton>
-        </GridControlsContainer>
+        <ControlContainer>
+          <ThemeButton />
+          <GridButtons />
+        </ControlContainer>
       </SubheadingContainer>
     </Section>
   );
@@ -128,53 +108,14 @@ const SubheadingContainer = styled.div`
   `};
 `;
 
-const GridControlsContainer = styled.div`
+const ControlContainer = styled.div`
   display: flex;
-  justify-content: right;
-  align-items: right;
+  width: 175px;
+  margin:0px 0px 0px 0px;
+  justify-content: space-between;
+  align-items: center;
 
   ${mediaqueries.tablet`
     display: none;
   `};
-`;
-
-const GridButton = styled.button<{ active: boolean }>`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  background: transparent;
-  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &[data-a11y='true']:focus::after {
-    content: '';
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: 120%;
-    height: 120%;
-    border: 2px solid ${p => p.theme.colors.accent};
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 50%;
-  }
-
-  svg {
-    opacity: ${p => (p.active ? 1 : 0.25)};
-    transition: opacity 0.2s;
-
-    path {
-      fill: ${p => p.theme.colors.primary};
-    }
-  }
 `;

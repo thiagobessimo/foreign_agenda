@@ -21,7 +21,6 @@ const DarkModeToggle: React.FC<{}> = () => {
 
 const ThemeButton: React.FC<{}> = () => {
   const [mode, setMode] = useColorMode()
-  const isDark = (setMode === `light` || setMode === `sky`);
   const cycleMode = e => {
     const i = modes.indexOf(mode)
     const next = modes[(i + 1) % modes.length]
@@ -33,7 +32,7 @@ const ThemeButton: React.FC<{}> = () => {
             <Button
               onClick={cycleMode}>
                 {mode}
-                <DarkModeToggle />
+                {/* <DarkModeToggle /> */}
             </Button>
           </ButtonWrapper>
   )
@@ -44,14 +43,15 @@ export default ThemeButton;
 const Button = styled.div`
   display: flex;
   position: relative;
-  font-weight: 600;
-  font-size: 18px;
   font-family: ${p => p.theme.fonts.sansSerif};
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
   color: ${(p) => p.theme.colors.primary};
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9);
   align-items: center;
-  justify-content: space-between;
-  width: 95px;
+  justify-content: flex-start;
+  width: 50px;
   height: 25px;
   margin: 0px 0px;
 
@@ -68,6 +68,7 @@ const ButtonWrapper = styled.button`
     &[data-a11y="true"]:focus::after {
     content: "";
     position: absolute;
+    text-align: center;
     left: 0;
     top: -30%;
     width: 100%;
@@ -89,6 +90,7 @@ const IconWrapper = styled.button<{ isDark: boolean }>`
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
+  transform: scale(0.75);
   margin: 0px 0px;
 
   ${mediaqueries.tablet`
@@ -147,5 +149,5 @@ const MoonMask = styled.div<{ isDark: boolean }>`
   background: ${p => p.theme.colors.background};
   transform: translate(${p => (p.isDark ? "14px, -14px" : "0, 0")});
   opacity: ${p => (p.isDark ? 0 : 1)};
-  transition: ${p => p.theme.colorModeTransition}, transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 `;

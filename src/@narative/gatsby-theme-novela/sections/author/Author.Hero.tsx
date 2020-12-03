@@ -1,44 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from "@emotion/styled";
 
-import Icons from '@icons';
 import mediaqueries from "@styles/media";
 import { IAuthor } from "@types";
 
+import ThemeButton from "@components/ThemeButton";
+import GridButtons from "@components/GridButtons";
 import Image from "@components/Image";
 import SocialLinks from "@components/SocialLinks";
-
-import { GridLayoutContext } from "../articles/Articles.List.Context";
-
-const GridButtons: React.FC = () => {
-  const { gridLayout = 'tiles', hasSetGridLayout, setGridLayout } = useContext(
-    GridLayoutContext,
-  );
-
-  const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
-  return(
-        <GridControlsContainer>
-          <GridButton
-            onClick={() => setGridLayout('tiles')}
-            active={tilesIsActive}
-            data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
-          >
-            <Icons.Tiles />
-          </GridButton>
-          <GridButton
-            onClick={() => setGridLayout('rows')}
-            active={!tilesIsActive}
-            data-a11y="false"
-            title="Show articles in Row grid"
-            aria-label="Show articles in Row grid"
-          >
-            <Icons.Rows />
-          </GridButton>
-        </GridControlsContainer>
-  )
-};
 
 interface AuthorHeroProps {
   author: IAuthor;
@@ -56,7 +25,10 @@ const AuthorHero: React.FC<AuthorHeroProps> = ({ author }) => {
       </Social>
       <BioContainer>
         <Subheading> {author.bio} </Subheading>
-        <GridButtons />
+        <ControlContainer>
+          <ThemeButton />
+          <GridButtons />
+        </ControlContainer>
       </BioContainer>
     </Hero>
   );
@@ -94,7 +66,6 @@ const HeroImage = styled.div`
   margin-bottom: 20px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid ${p => p.theme.colors.primary};
   box-shadow: 0px 15px 30px #00000000;
   max-width: 1200px;
 
@@ -117,9 +88,10 @@ const RoundedImage = styled(Image)`
 `;
 
 const Heading = styled.h1`
+  font-family: ${p => p.theme.fonts.sansSerif};
   font-size: 84px;
   font-weight: 800;
-  font-family: ${p => p.theme.fonts.sansSerif};
+  line-height: 1.2;
   color: ${p => p.theme.colors.primary};
 
   ${mediaqueries.tablet`
@@ -138,9 +110,10 @@ const Heading = styled.h1`
 const Subheading = styled.p`
   max-width: 500px;
   color: ${p => p.theme.colors.grey};
-  font-size: 18px;
   font-family: ${p => p.theme.fonts.sansSerif};
-  line-height: 1.4;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.618;
   text-align: left;
 
   ${mediaqueries.tablet`
@@ -189,9 +162,9 @@ const BioContainer = styled.div`
   `};
 `;
 
-const GridControlsContainer = styled.div`
+const ControlContainer = styled.div`
   display: flex;
-  width: 100px;
+  width: 175px;
   margin:0px 0px 0px 0px;
   justify-content: space-between;
   align-items: center;
@@ -199,45 +172,4 @@ const GridControlsContainer = styled.div`
   ${mediaqueries.tablet`
     display: none;
   `};
-`;
-
-const GridButton = styled.button<{ active: boolean }>`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  background: transparent;
-  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &[data-a11y='true']:focus::after {
-    content: '';
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: 120%;
-    height: 120%;
-    border: 2px solid ${p => p.theme.colors.accent};
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 50%;
-  }
-
-  svg {
-    opacity: ${p => (p.active ? 1 : 0.25)};
-    transition: opacity 0.2s;
-
-    path {
-      fill: ${p => p.theme.colors.primary};
-    }
-  }
 `;

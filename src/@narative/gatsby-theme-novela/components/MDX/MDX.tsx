@@ -67,14 +67,14 @@ const MDX: React.FC<MDXProps> = ({ content, children, ...props }) => {
 export default MDX;
 
 const IMAGE_WIDTHS = {
-  regular: '800px',
-  large: '1000px',
+  regular: '680px',
+  large: '800px',
   full: '100vw',
 };
 
 const ARTICLE_WIDTH = css`
   width: 100%;
-  max-width: 800px;
+  max-width: 680px;
 
   ${mediaqueries.desktop`
     max-width: calc(507px + 53px);
@@ -133,14 +133,16 @@ const PrismCSS = p => css`
   .prism-code {
     overflow: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 680px;
     margin: 0 auto;
     padding: 32px;
-    font-size: 14px;
     margin: 15px auto 50px;
     border: 1px solid ${p.theme.colors.prism.highlightBorder};
     border-radius: 0px;
     font-family: ${p.theme.fonts.monospace};
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.618;
     background: ${p.theme.colors.prism.background};
 
     .token-line {
@@ -244,7 +246,7 @@ const ImageCSS = css`
     margin: 15px auto 50px;
     border-radius: 5px;
     width: 100%;
-    max-width: 800px;
+    max-width: 680px;
 
     ${mediaqueries.tablet`
       margin: 10px auto 45px;

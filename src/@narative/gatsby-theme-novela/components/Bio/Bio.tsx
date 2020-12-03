@@ -18,7 +18,14 @@ const Bio: React.FC<IAuthor> = ({ author }) => {
           <RoundedImage src={author.avatar.medium} />
         </BioAvatarInner>
       </BioAvatar>
-      <BioText dangerouslySetInnerHTML={{ __html: author.bio }} />
+      <BioText
+        as={author.authorsPage ? Link : 'div'}
+        to={author.slug}
+        data-a11y="false"
+        aria-label="Author's bio"
+      >
+        {author.bio}
+      </BioText>
     </BioContainer>
   );
 };
@@ -75,7 +82,7 @@ const BioAvatarInner = styled.div`
   overflow: hidden;
 `;
 
-const BioText = styled.p`
+const BioText = styled.div`
   max-width: 450px;
   font-size: 14px;
   line-height: 1.4;

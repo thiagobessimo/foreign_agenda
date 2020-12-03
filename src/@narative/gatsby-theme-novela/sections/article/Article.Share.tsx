@@ -51,9 +51,14 @@ const ArticleShare: React.FC<{}> = () => {
        * the window.selection values will give the previous ranges instead of the current!
        */
       setTimeout(() => {
-        const article = document.getElementsByTagName('article')[0];
-        const paragraphOffset = document.getElementsByTagName('p')[0]
-          .offsetLeft;
+        const article = document.getElementsByTagName("article")[0];
+        let paragraphOffset = 0;
+        if (
+          document.getElementsByTagName("p") &&
+          document.getElementsByTagName("p").length >= 0
+        ) {
+          paragraphOffset = document.getElementsByTagName("p")[0].offsetLeft;
+        }
 
         if (!article) return;
 
@@ -249,8 +254,8 @@ const MenuFloat = styled.div<{ isDark: boolean }>`
   width: ${MENU_WIDTH}px;
   height: ${MENU_HEIGHT}px;
   padding: 7px 11px 7px 19px;
-  color: ${p => p.theme.colors.background};
-  background: ${p => p.theme.colors.primary};
+  color: ${(p) => p.theme.colors.background};
+  background: ${(p) => p.theme.colors.primary};
   border-radius: 5px;
   font-size: 18px;
   font-weight: 600;
@@ -273,7 +278,7 @@ const MenuFloat = styled.div<{ isDark: boolean }>`
 
   svg {
     path {
-      fill: ${p => p.theme.colors.background};
+      fill: ${(p) => p.theme.colors.background};
     }
   }
 `;

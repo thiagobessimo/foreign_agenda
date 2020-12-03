@@ -9,8 +9,8 @@ import Substack from "@components/Substack";
 import mediaqueries from "@styles/media";
 
 const footerLinks = [
-  { to: '/privacy', text: 'Privacy' },
-  { to: '/contact', text: 'Contact' },
+  { to: '/privacy-policy', text: 'Privacy' },
+  { to: '/authors/thiago-p-b-bessimo', text: 'Contact' },
 ]
 
 const siteQuery = graphql`
@@ -61,7 +61,6 @@ const Footer: React.FC<{}> = () => {
 
   return (
     <>
-      <FooterGradient />
       <Section narrow>
         <SubstackDivider>Newsletter</SubstackDivider>
         <FooterContainer>
@@ -115,18 +114,6 @@ const FooterContainer = styled.div`
   ${mediaqueries.phablet`
   // padding-bottom: 50px;
   `}
-`;
-
-const FooterGradient = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 590px;
-  z-index: 0;
-  pointer-events: none;
-  background: ${(p) => p.theme.colors.gradient};
-  transition: ${(p) => p.theme.colorModeTransition};
 `;
 
 const SubstackDivider = styled.h3`
@@ -255,12 +242,13 @@ const Menu = styled.div`
 
 const FooterLink = styled(Link)`
   position: relative;
-  font-weight: 600;
-  font-size: 18px;
-  text-align: left;
   font-family: ${p => p.theme.fonts.sansSerif};
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.618;
+  text-align: left;
   color: ${(p) => p.theme.colors.primary};
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 
   &:hover {
     opacity: 0.6;

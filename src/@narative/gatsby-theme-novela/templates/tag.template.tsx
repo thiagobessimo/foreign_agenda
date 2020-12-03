@@ -29,24 +29,11 @@ const ArticlesPage: Template = ({ location, pageContext }) => {
           <Paginator {...pageContext} />
         </TagPaginator>
       </Section>
-      <TagsGradient />
     </Layout>
   );
 }
 
 export default ArticlesPage;
-
-const TagsGradient = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 590px;
-  z-index: 0;
-  pointer-events: none;
-  background: ${p => p.theme.colors.gradient};
-  transition: ${p => p.theme.colorModeTransition};
-`;
 
 const TagPaginator = styled.div`
   text-align: center;

@@ -72,7 +72,6 @@ const ArticleAuthors: React.FC<AuthorsProps> = ({ authors }) => {
         to={authors[0].slug}
       >
         <strong>{authors[0].name}</strong>
-        <HideOnMobile>,&nbsp;</HideOnMobile>
       </AuthorLink>
     );
   }
@@ -83,23 +82,29 @@ export default ArticleAuthors;
 const AuthorLink = styled.div`
   display: flex;
   align-items: center;
-  color: inherit;
+  color: ${p => p.theme.colors.primary};
+  font-size: 18px;
+  font-weight: 600;
 
   strong {
-    transition: ${p => p.theme.colorModeTransition} 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+    transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 0px 0px;
+    color: ${p => p.theme.colors.primary};
   }
 
   &:hover strong {
-    color: ${p => p.theme.colors.primary};
+    opacity: 0.6;
   }
 `;
 
 const CoAuthorsListOpen = styled.ul`
   position: absolute;
   z-index: 2;
-  left: -21px;
-  right: -21px;
-  top: -19px;
+  left: -10px;
+  right: -10px;
+  top: -8px;
   padding: 10px;
   background: ${p => p.theme.colors.background};
   border: 1px solid ${p => p.theme.colors.primary};
@@ -124,7 +129,7 @@ const NameContainer = styled.strong`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
 
   &::before {
@@ -157,13 +162,13 @@ const AuthorNameOpen = styled.strong`
   position: relative;
   cursor: pointer;
   color: ${p => p.theme.colors.secondary};
-  font-weight: 800;
+  font-weight: 600;
     ${mediaqueries.desktop`
     font-weight: 800;
   `}
 
   ${mediaqueries.phablet`
-    font-weight: 800;
+    font-weight: 600;
   `}
 `;
 
@@ -172,10 +177,10 @@ const CoAuthorsContainer = styled.div<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   color: ${p => p.theme.colors.primary};
   cursor: pointer;
-  margin-right: 15px;
+  margin-right: 0px;
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 
   &::before {
@@ -186,7 +191,7 @@ const CoAuthorsContainer = styled.div<{ isOpen: boolean }>`
     top: -10px;
     bottom: -10px;
     background: ${p => p.theme.colors.background};
-    border: 1px solid ${p => p.theme.colors.secondary};
+    border: 1px solid ${p => p.theme.colors.primary};
     color: ${p => p.theme.colors.primary};
     border-radius: 0px;
     z-index: 0;
@@ -203,12 +208,6 @@ const CoAuthorsContainer = styled.div<{ isOpen: boolean }>`
   ${mediaqueries.phablet`
     font-size: 16px;
     align-items: center;
-    font-weight: 800;
-  `}
-`;
-
-const HideOnMobile = styled.span`
-  ${mediaqueries.phablet`
-    display: none;
+    font-weight: 600;
   `}
 `;

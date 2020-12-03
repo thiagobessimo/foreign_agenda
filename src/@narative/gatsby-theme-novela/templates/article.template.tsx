@@ -13,7 +13,6 @@ import { debounce } from '@utils';
 
 import ArticleAside from "../sections/article/Article.Aside";
 import ArticleHero from "../sections/article/Article.Hero";
-import ArticleControls from "../sections/article/Article.Controls";
 import ArticlesNext from "../sections/article/Article.Next";
 import ArticleSEO from "../sections/article/Article.SEO";
 import ArticleShare from "../sections/article/Article.Share";
@@ -84,13 +83,16 @@ const Article: Template = ({ pageContext, location }) => {
     <Layout>
       <ArticleSEO article={article} authors={authors} location={location} />
       <ArticleHero article={article} authors={authors} tags={tags} />
-      <ArticleAside contentHeight={contentHeight}>
+      {/* <ArticleAside contentHeight={contentHeight}>
         <Progress contentHeight={contentHeight} />
-      </ArticleAside>
+      </ArticleAside> */}
       {/* <MobileControls>
         <ArticleControls />
       </MobileControls> */}
       <ArticleBody ref={contentSectionRef}>
+        {/* <ArticleAside contentHeight={contentHeight}>
+          <Progress contentHeight={contentHeight} />
+        </ArticleAside> */}
         <MDXRenderer content={article.body}>
           <ArticleShare />
         </MDXRenderer>
@@ -167,7 +169,7 @@ const FooterNext = styled.h3`
   &::after {
     content: '';
     position: absolute;
-    background: ${p => p.theme.colors.grey};
+    background: ${p => p.theme.colors.horizontalRule};
     width: ${(900 / 1140) * 100}%;
     height: 1px;
     right: 0;

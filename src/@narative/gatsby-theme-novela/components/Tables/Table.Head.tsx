@@ -4,10 +4,10 @@ const Head = styled.thead`
   text-align: left;
   border-collapse: collapse;
   position: relative;
-  line-height: 1.756;
-  font-weight: 800;
-  color: ${p => p.theme.colors.primary};
   font-family: ${p => p.theme.fonts.sansSerif};
+  font-weight: 800;
+  line-height: 1.618;
+  color: ${p => p.theme.colors.primary};
   transition: ${p => p.theme.colorModeTransition};
 `;
 
