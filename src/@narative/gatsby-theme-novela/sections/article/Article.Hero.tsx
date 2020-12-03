@@ -131,7 +131,7 @@ const HeroTitle = styled(Heading.h1)`
   font-size: 68px;
   font-weight: 800;
   line-height: 1.2;
-  padding: 0xp 0px 25px;
+  padding: 0xp;
   color: ${p => p.theme.colors.articleText};
 
   ${mediaqueries.desktop`
@@ -153,7 +153,7 @@ const HeroExcerpt = styled(Headings.h1)`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.618;
-  padding: 25px 0px;
+  padding: 10px 0px;
   color: ${p => p.theme.colors.articleText};
 
   ${mediaqueries.desktop`
@@ -177,7 +177,7 @@ const HeroSubtitleTags = styled.div<{ hasCoTAgs: boolean }>`
   font-size: 32px;
   font-weight: 400;
   line-height: 1.618;
-  padding: 0px 0px 10px;
+  padding: 0px 0px 5px;
   color: ${p => p.theme.colors.primary};
 
   ${p => mediaqueries.phablet`
@@ -202,7 +202,7 @@ const HeroSubtitleAuthors = styled.div<{ hasCoAUthors: boolean }>`
   font-size: 18px;
   font-weight: 600;
   line-height: 1.618;
-  padding: 10px 0px 0px;
+  padding: 5px 0px 0px;
   color: ${p => p.theme.colors.primary};
 
   ${p => mediaqueries.phablet`

@@ -184,7 +184,7 @@ const showDetails = css`
   }
 
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -205,7 +205,7 @@ const listTile = p => css`
     : `${narrow} ${narrow} ${narrow}`};
   grid-template-rows: 105%;
   grid-column-gap: 30px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
 
   &:not(:last-child) {
     margin-bottom: 0px;
@@ -240,7 +240,7 @@ const listItemRow = p => css`
   grid-template-columns: 30% 1fr;
   grid-column-gap: 50px;
   align-items: center;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
 
   ${mediaqueries.desktop`
     grid-column-gap: 24px;
@@ -328,7 +328,7 @@ const Title = styled(Headings.h2)`
   line-height: 1.618;
   color: ${p => p.theme.colors.primary};
   padding: ${p =>
-    p.hasOverflow && p.gridLayout === 'tiles' ? '5px' : '5px'} 0px;
+    p.hasOverflow && p.gridLayout === 'tiles' ? '0px' : '0px'} 0px 5px;
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
   ${limitToTwoLines};
 
@@ -360,7 +360,7 @@ const Excerpt = styled(Headings.h2)<{
   ${limitToTwoLines};
   font-weight: 400;
   font-size: 18px;
-  padding-top: 5px;
+  padding: 0px;
   color: ${p => p.theme.colors.secondary};
   max-width: ${p => (p.gridLayout === 'tiles' ? '100%' : '80%')};
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
@@ -390,7 +390,7 @@ const Excerpt = styled(Headings.h2)<{
 const MetaData = styled(Headings.h2)`
   font-weight: 400;
   font-size: 16px;
-  padding-top: 10px;
+  padding: 5px 0px;
   color: ${p => p.theme.colors.secondary};
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 

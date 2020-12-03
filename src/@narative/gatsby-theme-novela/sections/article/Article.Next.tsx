@@ -198,7 +198,7 @@ const Title = styled(Headings.h2)`
   line-height: 1.618;
   color: ${p => p.theme.colors.primary};
   padding: ${p =>
-    p.hasOverflow && p.gridLayout === 'tiles' ? '5px' : '5px'} 0px;
+    p.hasOverflow && p.gridLayout === 'tiles' ? '0px' : '0px'} 0px 5px;
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
   ${limitToTwoLines};
 
@@ -229,7 +229,7 @@ const Excerpt = styled(Headings.h2)<{
   ${limitToTwoLines};
   font-weight: 400;
   font-size: 18px;
-  padding-top: 5px;
+  padding: 0px;
   color: ${p => p.theme.colors.secondary};
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 
@@ -258,7 +258,7 @@ const Excerpt = styled(Headings.h2)<{
 const MetaData = styled(Headings.h2)`
   font-weight: 400;
   font-size: 16px;
-  padding-top: 10px;
+  padding: 5px 0px;
   color: ${p => p.theme.colors.secondary};
   transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 
