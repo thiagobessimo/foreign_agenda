@@ -30,13 +30,13 @@ Others
 #642fff - purple
 #ff60dd - pink
 
-  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
 
-  &:hover {
-    opacity: 0.6;
-  }
+&:hover {
+  opacity: 0.6;
+}
 
-  font-family: ${p => p.theme.fonts.sansSerif};
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.618;
+font-family: ${p => p.theme.fonts.sansSerif};
+font-size: 24px;
+font-weight: 600;
+line-height: 1.618;

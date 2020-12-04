@@ -27,12 +27,12 @@ module.exports = {
       },
     ],
     footer: {
-      copyright: "Built with Draftbox",
+      copyright: "Built by Breve",
     },
   },
   plugins: [
     {
-      resolve: "@narative/gatsby-theme-novela",
+      resolve: "@breve/gatsby-theme-novela-breve",
       options: {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
