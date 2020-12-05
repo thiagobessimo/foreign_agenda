@@ -10,7 +10,7 @@
     "proxy": "netlify-cms-proxy-server"
   },
   "dependencies": {
-    "@breve/gatsby-theme-novela-breve": "^0.*",
+    "gatsby-theme-breve": "^0.*",
     "@types/youtube": "0.0.38",
     "codemirror": "^5.58.3",
     "core-js": "^3.8.0",

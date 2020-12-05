@@ -1,9 +1,9 @@
 import React from "react";
 
-import Layout from "@breve/gatsby-theme-novela-breve/src/components/Layout";
-import Section from "@breve/gatsby-theme-novela-breve/src/components/Section";
-import SEO from "@breve/gatsby-theme-novela-breve/src/components/SEO";
-import Headings from "@breve/gatsby-theme-novela-breve/src/components/Headings";
+import Layout from "gatsby-theme-breve/src/components/Layout";
+import Section from "gatsby-theme-breve/src/components/Section";
+import SEO from "gatsby-theme-breve/src/components/SEO";
+import Headings from "gatsby-theme-breve/src/components/Headings";
 
 function NotFoundPage() {
   return (

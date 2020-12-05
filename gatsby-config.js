@@ -32,7 +32,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "@breve/gatsby-theme-novela-breve",
+      resolve: "gatsby-theme-breve",
       options: {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
