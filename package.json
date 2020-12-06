@@ -10,7 +10,6 @@
     "proxy": "netlify-cms-proxy-server"
   },
   "dependencies": {
-    "gatsby-theme-breve": "thiagobessimo/gatsby-theme-breve#master",
     "@types/youtube": "0.0.38",
     "codemirror": "^5.58.3",
     "core-js": "^3.8.0",
@@ -21,6 +20,7 @@
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.1.40",
     "gatsby-plugin-theme-ui": "^0.3.4",
+    "gatsby-theme-breve": "thiagobessimo/gatsby-theme-breve#master",
     "netlify-cms-app": "^2.11.23",
     "netlify-cms-lib-widgets": "^1.6.0",
     "netlify-cms-proxy-server": "^1.1.4",
@@ -28,6 +28,7 @@
     "react": "^16.8.6",
     "react-device-detect": "^1.14.0",
     "react-dom": "^16.8.6",
+    "react-swipeable": "^6.0.1",
     "redux": "^3.7.2",
     "seamless-immutable": "^7.1.4",
     "theme-ui": "^0.3.4",
