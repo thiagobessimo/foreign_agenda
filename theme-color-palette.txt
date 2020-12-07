@@ -11,6 +11,7 @@ Blacks
 #000000 - black 1
 #000510 - black 2
 #001020 - black 3
+#001530 - black 3.5
 #002040 - black 4
 #004080 - black 5
 
@@ -20,6 +21,7 @@ Blues
 #2040ff - blue 3
 #2060ff - blue 4
 #2080ff - blue 5
+#4080ff - blue 5
 
 Others
 #ff4040 - red
