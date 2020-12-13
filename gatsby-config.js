@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Breve`,
@@ -43,7 +45,7 @@ module.exports = {
         tagsPage: true,
         sources: {
           local: true,
-          // contentful: true,
+          contentful: false,
         },
       },
     },

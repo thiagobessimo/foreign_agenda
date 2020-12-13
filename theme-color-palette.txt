@@ -11,9 +11,12 @@ Blacks
 #000000 - black 1
 #000510 - black 2
 #001020 - black 3
-#001530 - black 3.5
-#002040 - black 4
-#004080 - black 5
+#001530 - black 4
+#002040 - black 5
+#002550 - black 6
+#003060 - black 7
+#003570 - black 8
+#004080 - black 9
 
 Blues
 #2000ff - blue 1
@@ -21,7 +24,7 @@ Blues
 #2040ff - blue 3
 #2060ff - blue 4
 #2080ff - blue 5
-#4080ff - blue 5
+#4080ff - blue 6
 
 Others
 #ff4040 - red
@@ -29,7 +32,7 @@ Others
 #ffc500 - yellow
 #08ddaa - green
 #2080ff - blue 5
-#642fff - purple
+#4444ff - purple
 #ff60dd - pink
 
 transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9);
