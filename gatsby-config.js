@@ -70,11 +70,57 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `limelight`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          "'Literata', 'Crimson Pro', 'EB Garamond', 'Merriweather', 'Ubuntu', 'Roboto', 'Fira Code', 'source-code-pro'"
         ],
         display: 'swap'
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Literata',
+            variable: true,
+            weights: ['200..900']
+          },
+          {
+            family: 'Crimson Pro',
+            variable: true,
+            weights: ['200..900']
+          },
+          {
+            family: 'EB Garamond',
+            variable: true,
+            weights: ['200..900']
+          },
+          {
+            family: 'Merriweather',
+            variable: true,
+            weights: ['200..900']
+          },
+          {
+            family: 'Ubuntu',
+            variable: false,
+            weights: ['200..900']
+          },
+          {
+            family: 'Roboto',
+            variable: false,
+            weights: ['200..900']
+          },
+          {
+            family: 'Fira Code',
+            variable: true,
+            weights: ['200..900']
+          },
+          {
+            family: 'source-code-pro',
+            variable: false,
+            weights: ['200..900']
+          }
+        ]
+      }
+    }
   ],
 };
