@@ -3,16 +3,14 @@
     Breve is a platform for small briefings on topics related to politics, international relations and data
   avatar: ./avatars/breve.png
   social:
-  - name: twitter
-    url: https://twitter.com/breveData
-  - name: github
-    url: https://github.com/thiagobessimo
-  - name: instagram
-    url: https://instagram.com/thiago.bessimo
-  - name: linkedin
-    url: https://www.linkedin.com/in/thiagobessimo/
-  - name: url
-    url: https://www.observachina.com
+    - name: twitter
+      url: https://twitter.com/breveData
+    - name: linkedin
+      url: https://www.linkedin.com/in/thiagobessimo/
+    - name: instagram
+      url: https://instagram.com/thiago.bessimo
+    - name: github
+      url: https://github.com/thiagobessimo
 
 - name: Thiago P B Bessimo
   bio: |
@@ -20,81 +18,13 @@
   avatar: ./avatars/thiago-p-b-bessimo.png
   featured: true
   social:
-  - name: twitter
-    url: https://twitter.com/breveData
-  - name: github
-    url: https://github.com/thiagobessimo
-  - name: instagram
-    url: https://instagram.com/thiago.bessimo
-  - name: linkedin
-    url: https://www.linkedin.com/in/thiagobessimo/
-  - name: url
-    url: https://www.observachina.com
-
-- name: Dennis Brotzky
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
-  social:
     - name: twitter
-      url: https://twitter.com/breveData
-    - name: github
-      url: https://github.com/thiagobessimo
-    - name: instagram
-      url: https://instagram.com/thiago.bessimo
+      url: https://twitter.com/bessimo
     - name: linkedin
       url: https://www.linkedin.com/in/thiagobessimo/
+    - name: instagram
+      url: https://instagram.com/thiago.bessimo
+    - name: github
+      url: https://github.com/thiagobessimo,
     - name: url
-      url: https://www.observachina.com
-
-- name: Thiago Costa
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/thiago-costa.jpg
-  social:
-  - name: twitter
-    url: https://twitter.com/breveData
-  - name: github
-    url: https://github.com/thiagobessimo
-  - name: instagram
-    url: https://instagram.com/thiago.bessimo
-  - name: linkedin
-    url: https://www.linkedin.com/in/thiagobessimo/
-  - name: url
-    url: https://www.observachina.com
-
-- name: Brad Tiller
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/brad-tiller.jpg
-  social:
-  - name: twitter
-    url: https://twitter.com/breveData
-  - name: github
-    url: https://github.com/thiagobessimo
-  - name: instagram
-    url: https://instagram.com/thiago.bessimo
-  - name: linkedin
-    url: https://www.linkedin.com/in/thiagobessimo/
-  - name: url
-    url: https://www.observachina.com
-
-- name: Mack Mansouri
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/mack-mansouri.jpg
-  social:
-  - name: twitter
-    url: https://twitter.com/breveData
-  - name: github
-    url: https://github.com/thiagobessimo
-  - name: instagram
-    url: https://instagram.com/thiago.bessimo
-  - name: linkedin
-    url: https://www.linkedin.com/in/thiagobessimo/
-  - name: url
-    url: https://www.observachina.com
+      url: https://www.observachina.com/perfil-equipe/thiago-p-b-bessimo

@@ -1,32 +1,26 @@
-require('dotenv').config();
-
 module.exports = {
   siteMetadata: {
-    title: `Breve`,
-    name: `Breve`,
+    title: `Foreign Agenda`,
+    name: `Foreign Agenda`,
     siteUrl: `https://thiagobessimo.github.io/breve/`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `A publication about Data, Foreign Policy and Theory`,
     hero: {
-      heading: `Get smart`,
-      maxWidth: 800,
+      heading: `data,\nforeign policy,\ntheory`,
+      maxWidth: 750,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/breveData`,
-      },
-      {
-        name: `github`,
-        url: `https://github.com/thiagobessimo`,
-      },
-      {
-        name: `instagram`,
-        url: `https://instagram.com/thiago.bessimo`,
+        url: `https://twitter.com/bessimo`,
       },
       {
         name: `linkedin`,
         url: `https://www.linkedin.com/in/thiagobessimo/`,
       },
+      {
+        name: `github`,
+        url: `https://github.com/thiagobessimo`,
+      }
     ],
     footer: {
       copyright: "Built by Breve",
@@ -40,7 +34,7 @@ module.exports = {
         contentAuthors: "content/authors",
         contentTags: "content/tags",
         basePath: "/",
-        pageLength: 9,
+        pageLength: 6,
         authorsPage: true,
         tagsPage: true,
         sources: {
