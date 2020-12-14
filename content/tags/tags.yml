@@ -1,0 +1,24 @@
+- name: Foreign Policy
+  bio: |
+    Foreign Policy
+  featured: false
+- name: Theory
+  bio: |
+    Theory
+  featured: false
+- name: Int'l Security
+  bio: |
+    International Security
+  featured: false
+- name: Data Viz
+  bio: |
+    Data Visualisation
+  featured: false
+- name: China
+  bio: |
+    China 中国
+  featured: false
+- name: Breve
+  bio: |
+    Breve
+  featured: false
